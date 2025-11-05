@@ -1,8 +1,56 @@
 @import 'tailwindcss';
 
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility text-gradient {
+  @apply bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
+}
+
 @layer base {
   * {
-    @apply overflow-x-hidden min-h-screen m-0 p-0 font-['Outfit',sans-serif];
+    @apply m-0 p-0 box-border font-['Outfit',sans-serif];
+  }
+  body,
+  html {
+    @apply bg-[#333] text-stone-200;
+  }
+  main {
+    @apply w-full flex flex-col gap-10 md:gap-14;
   }
 }
 
+@layer components {
+  #navbar {
+    @apply flex items-center justify-between gap-5 px-5 md:px-10 lg:px-20 my-3 relative;
+    a {
+      @apply flex gap-1 items-center hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.8)] cursor-pointer transition-all duration-300;
+      img {
+        @apply w-8;
+      }
+      span {
+        @apply text-2xl font-bold text-gradient;
+      }
+    }
+    .menu {
+      @apply block md:hidden text-slate-200 cursor-pointer hover:text-blue-400 transition-colors;
+    }
+    ul {
+      @apply hidden md:flex flex-col md:flex-row items-center justify-center gap-5
+             absolute md:relative top-full left-0 right-0
+             bg-[#222] md:bg-transparent
+             py-5 md:py-0
+             shadow-lg md:shadow-none;
+      &.flex {
+        @apply flex;
+      }
+      li {
+        @apply cursor-pointer text-stone-200 text-lg;
+        a {
+          @apply hover:text-gradient transition-all duration-300;
+        }
+      }
+    }
+  }
+}
