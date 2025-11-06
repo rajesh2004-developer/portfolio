@@ -20,7 +20,7 @@
     @apply text-stone-200;
   }
   main {
-    @apply w-full flex flex-col gap-10 md:gap-14;
+    @apply w-full flex flex-col gap-10 md:gap-16 lg:gap-20;
   }
   button {
     @apply flex gap-2 px-5 py-3 border-2 rounded-full border-blue-500 text-xl items-center hover:bg-linear-to-r from-blue-400 to-blue-600 transition-colors duration-300 cursor-pointer;
@@ -68,7 +68,7 @@
         @apply flex-center flex-col md:items-start gap-6;
 
         h2 {
-          @apply text-4xl lg:text-6xl font-bold tracking-tight;
+          @apply text-5xl lg:text-7xl font-bold tracking-tight;
 
           span {
             @apply text-gradient drop-shadow-[0_0_12px_rgba(37,99,235,0.6)] transition-all duration-300;
@@ -76,7 +76,7 @@
         }
 
         p {
-          @apply text-lg lg:text-xl text-gray-300 tracking-wide;
+          @apply text-xl lg:text-2xl text-gray-300 tracking-wider;
 
           span {
             @apply text-gradient font-semibold drop-shadow-[0_0_8px_rgba(37,99,235,0.5)];
@@ -97,13 +97,50 @@
       }
     }
     .right {
-      @apply flex-center flex-1 md:justify-start;
-      img {
-        @apply w-80 h-80 rounded-full border-2 border-blue-500 grayscale-100 object-cover drop-shadow-[0_0_8px_rgba(37,99,235,0.8)] cursor-pointer transition-all duration-[90000000];
+      @apply flex-center flex-1 md:justify-start p-10;
+      #profile-image {
+        @apply w-80 h-80 lg:w-100 lg:h-100 rounded-full border-2 border-blue-500 grayscale-100 object-cover drop-shadow-[0_0_8px_rgba(37,99,235,0.8)] cursor-pointer transition-all duration-[90000000];
         &:hover {
           @apply -rotate-360  animate-spin;
         }
       }
+    }
+  }
+  #about {
+    @apply flex-center flex-col gap-10;
+    .about-section {
+      @apply flex-center flex-col md:flex-row gap-20 md:gap-25;
+      .left {
+        @apply flex-center flex-1 md:justify-end p-10;
+        #profile-image {
+          @apply w-95 h-full rounded-2xl border-2 border-blue-500 grayscale-100 object-cover drop-shadow-[0_0_8px_rgba(37,99,235,0.8)] cursor-pointer transition-all duration-[90000000];
+        }
+      }
+      .right {
+        @apply flex-center flex-1 md:justify-end;
+        section {
+          @apply flex-center flex-col gap-5 md:items-start px-10;
+          h2 {
+            @apply text-4xl lg:text-6xl font-bold tracking-tight;
+            span {
+              @apply text-gradient drop-shadow-[0_0_12px_rgba(37,99,235,0.6)] transition-all duration-300;
+            }
+          }
+          p {
+            @apply text-lg lg:text-xl text-gray-300 tracking-wide;
+
+            span {
+              @apply text-gradient font-semibold drop-shadow-[0_0_8px_rgba(37,99,235,0.5)];
+            }
+          }
+        }
+      }
+    }
+  }
+  #projects {
+    @apply flex-center flex-col gap-10 lg:gap-14;
+    .project-wrap {
+      @apply flex-center flex-wrap gap-10;
     }
   }
 }
