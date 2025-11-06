@@ -12,18 +12,24 @@
   * {
     @apply m-0 p-0 box-border font-['Outfit',sans-serif];
   }
+  body::-webkit-scrollbar {
+    display: none;
+  }
   body,
   html {
-    @apply bg-[#333] text-stone-200;
+    @apply text-stone-200;
   }
   main {
     @apply w-full flex flex-col gap-10 md:gap-14;
+  }
+  button {
+    @apply flex gap-2 px-5 py-3 border-2 rounded-full border-blue-500 text-xl items-center hover:bg-linear-to-r from-blue-400 to-blue-600 transition-colors duration-300 cursor-pointer;
   }
 }
 
 @layer components {
   #navbar {
-    @apply flex items-center justify-between gap-5 px-5 md:px-10 lg:px-20 my-3 relative;
+    @apply flex items-center justify-between gap-5 px-5 md:px-10 lg:px-20 py-3 sticky shadow-lg shadow-blue-300/50 bg-transparent!;
     a {
       @apply flex gap-1 items-center hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.8)] cursor-pointer transition-all duration-300;
       img {
@@ -49,6 +55,53 @@
         @apply cursor-pointer text-stone-200 text-lg;
         a {
           @apply hover:text-gradient transition-all duration-300;
+        }
+      }
+    }
+  }
+  #Home {
+    @apply w-full flex-center flex-col-reverse md:flex-row h-[90vh] mt-10 gap-20 lg:gap-40;
+    .left {
+      @apply flex-center flex-1 md:justify-end;
+
+      section {
+        @apply flex-center flex-col md:items-start gap-6;
+
+        h2 {
+          @apply text-4xl lg:text-6xl font-bold tracking-tight;
+
+          span {
+            @apply text-gradient drop-shadow-[0_0_12px_rgba(37,99,235,0.6)] transition-all duration-300;
+          }
+        }
+
+        p {
+          @apply text-lg lg:text-xl text-gray-300 tracking-wide;
+
+          span {
+            @apply text-gradient font-semibold drop-shadow-[0_0_8px_rgba(37,99,235,0.5)];
+          }
+        }
+
+        button {
+          @apply mt-4 flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-600 to-blue-700 rounded-lg font-medium transition-all duration-300 hover:from-blue-700 hover:to-blue-800 hover:shadow-lg hover:shadow-blue-500/50;
+
+          #ad-icon {
+            @apply transition-transform duration-300 border rounded-full font-bold scale-[0.8] p-1 bg-amber-100 text-blue-400;
+          }
+
+          &:hover #ad-icon {
+            @apply translate-x-1;
+          }
+        }
+      }
+    }
+    .right {
+      @apply flex-center flex-1 md:justify-start;
+      img {
+        @apply w-80 h-80 rounded-full border-2 border-blue-500 grayscale-100 object-cover drop-shadow-[0_0_8px_rgba(37,99,235,0.8)] cursor-pointer transition-all duration-[90000000];
+        &:hover {
+          @apply -rotate-360  animate-spin;
         }
       }
     }

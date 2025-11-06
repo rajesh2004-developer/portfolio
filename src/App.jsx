@@ -1,14 +1,16 @@
+import Background from './components/Background';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 
 const App = () => {
   return (
-    <div>
+    <>
+      <Background />
       <Navbar />
       <main>
         <Hero />
       </main>
-    </div>
+    </>
   );
 };
 export default App;
