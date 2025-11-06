@@ -1,5 +1,6 @@
 import About from './components/About';
 import Background from './components/Background';
+import Contact from './components/Contact';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
@@ -15,6 +16,7 @@ const App = () => {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </main>
     </>
   );

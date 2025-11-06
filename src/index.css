@@ -137,10 +137,26 @@
       }
     }
   }
+  #skills {
+    @apply flex-center flex-col gap-10 lg:gap-14;
+    #skills-wrap {
+      @apply flex-center flex-wrap gap-10;
+    }
+  }
   #projects {
     @apply flex-center flex-col gap-10 lg:gap-14;
     .project-wrap {
       @apply flex-center flex-wrap gap-10;
+    }
+  }
+  #contact {
+    @apply flex-center flex-col gap-10 lg:gap-14;
+    button {
+      @apply mt-4 flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-600 to-blue-700 rounded-lg font-medium transition-all duration-300 hover:from-blue-700 hover:to-blue-800 hover:shadow-lg hover:shadow-blue-500/50;
+
+      &:hover #send-icon {
+        @apply translate-x-1;
+      }
     }
   }
 }
