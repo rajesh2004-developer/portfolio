@@ -1,9 +1,26 @@
+import { ArrowDown } from 'lucide-react';
+import profileImage from '../assets/profile.jpg';
+
 const Hero = () => {
   return (
     <div id="Home">
-      <div></div>
-      <div>
-        <img src="" alt="" />
+      <div className="left">
+        <section>
+          <h2>Hi There,</h2>
+          <h2>
+            I am <span>Rajesh</span>
+          </h2>
+          <p>
+            I am into <span>Frontend Development</span>
+          </p>
+          <button>
+            <span>About me</span>
+            <ArrowDown id='ad-icon'/>
+          </button>
+        </section>
+      </div>
+      <div className="right">
+        <img src={profileImage} alt="profileImage" />
       </div>
     </div>
   );
