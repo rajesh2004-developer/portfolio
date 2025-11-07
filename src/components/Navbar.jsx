@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from '/logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav id="navbar">
       <a href="/">
-        <img src="/logo.svg" alt="Logo" />
+        <img src={Logo} alt="Logo" />
         <span>ajesh</span>
       </a>
       <div className="menu" onClick={() => setIsOpen(!isOpen)}>
