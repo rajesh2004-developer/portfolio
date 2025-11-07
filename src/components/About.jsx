@@ -27,18 +27,23 @@ const About = () => {
               products, and I continuously seek opportunities to learn and grow
               in the ever-evolving tech landscape.
             </p>
-            <p>
+            <p className="flex gap-1">
               <span>Email:</span>{' '}
               <a href="mailTo:iamrajesh65892004@gmail.com">
                 iamrajesh65892004@gmail.com
               </a>
             </p>
-            <p>
+            <p className="flex gap-1">
               <span>Place:</span> Tamilnadu,India-607301
             </p>
-            <button>
-              Resume <Send />
-            </button>
+            <a
+              href="https://drive.google.com/file/d/17VfSIj0OQPUjJaZi14ejmhOSQy-PYxa_/view?usp=drive_link"
+              target="_blank"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 rounded-full border-blue-500 text-xl text-stone-200 hover:bg-linear-to-r hover:from-blue-400 hover:to-blue-600 hover:border-transparent transition-all duration-300 cursor-pointer group no-underline"
+            >
+              <span>Resume</span>
+              <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </a>
           </section>
         </div>
       </div>

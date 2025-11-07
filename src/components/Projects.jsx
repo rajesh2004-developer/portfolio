@@ -3,7 +3,7 @@ import { projects } from '../constants';
 
 const Projects = () => {
   return (
-    <div id="projects">
+    <div id="projects" className="p-3">
       <h2 className="text-3xl lg:text-5xl font-semibold text-center">
         Projects made
       </h2>

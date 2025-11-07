@@ -60,7 +60,7 @@
     }
   }
   #Home {
-    @apply w-full flex-center flex-col-reverse md:flex-row h-[90vh] mt-10 gap-20 lg:gap-40;
+    @apply w-full flex-center flex-col-reverse md:flex-row md:h-[90vh] mt-20 gap-10 lg:gap-40;
     .left {
       @apply flex-center flex-1 md:justify-end;
 
@@ -107,7 +107,7 @@
     }
   }
   #about {
-    @apply flex-center flex-col gap-10;
+    @apply flex-center flex-col gap-10 mt-10;
     .about-section {
       @apply flex-center flex-col md:flex-row gap-20 md:gap-25;
       .left {
@@ -157,6 +157,18 @@
       &:hover #send-icon {
         @apply translate-x-1;
       }
+    }
+  }
+  #footer {
+    @apply flex-center flex-col gap-5 shadow-md;
+    section {
+      @apply max-w-sm flex flex-col gap-3;
+    }
+    li {
+      @apply hover:text-gradient;
+    }
+    p {
+      @apply flex items-center gap-2;
     }
   }
 }

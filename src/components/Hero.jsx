@@ -14,7 +14,7 @@ const Hero = () => {
             I am into <span>Frontend Development</span>
           </p>
           <button>
-            <span>About me</span>
+            About me
             <ArrowDown id="ad-icon" />
           </button>
         </section>
