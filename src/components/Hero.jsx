@@ -14,13 +14,13 @@ const Hero = () => {
             I am into <span>Frontend Development</span>
           </p>
           <button>
-            <span>About me</span>
-            <ArrowDown id='ad-icon'/>
+            About me
+            <ArrowDown id="ad-icon" />
           </button>
         </section>
       </div>
       <div className="right">
-        <img src={profileImage} alt="profileImage" />
+        <img src={profileImage} alt="profileImage" id="profile-image" />
       </div>
     </div>
   );
